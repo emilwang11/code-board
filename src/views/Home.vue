@@ -1,18 +1,36 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-container>
+    <v-layout
+    >
+      <v-flex xs12>
+        <v-img
+          :src="require('../assets/landing-page.png')"
+          class="my-0"
+          contain
+          height= "700px"
+        ></v-img>
+      </v-flex>
+        <router-link :to="'/upload'">
+            <v-btn large class="button">
+             Start
+             </v-btn>
+         </router-link>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
-  name: 'home',
-  components: {
-    HelloWorld
-  }
+name: 'landingPage'
 }
 </script>
+
+
+<style lang="scss">
+
+.button {
+position: absolute;
+top: 800px;
+right: 200 px;
+}
+</style>
